@@ -17,15 +17,15 @@ const NavBar = () => {
       ];
 
     return (
-        <nav>
-            <div className="md:hidden text-3xl" onClick={() => setOpen(!open)}>
+        <nav className="bg-yellow-200 p-5">
+            <div className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
                 {
                     open === true ? <RxCross1></RxCross1> : <FiMenu></FiMenu>
                 }
             
             </div>
 
-            <ul className="md:flex">
+            <ul className={`md:flex duration-1000 absolute md:static bg-yellow-200 pl-6 pb-2 pt-1 ${open ? 'top-16' : '-top-32'}`}>
                 {
                     routes.map(route => <Link  key={route.id} route={route}></Link>)
                 }
