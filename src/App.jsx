@@ -15,6 +15,7 @@ function App() {
       <PriceOption></PriceOption>
       <LineChart></LineChart>
       <Phones></Phones>
+      
      
     </>
   )
